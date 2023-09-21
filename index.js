@@ -11,6 +11,10 @@ const aboutME = document.createElement("li");
 const menu = document.createElement("li");
 const contact = document.createElement("li");
 
+const aboutMELink = document.createElement("a");
+const menuLink = document.createElement("a");
+const contactLink = document.createElement("a");
+
 navBar.classList.add("navbar");
 headingDiv.classList.add("headingdiv");
 heading.classList.add("title");
@@ -20,15 +24,22 @@ aboutME.classList.add("aboutme");
 menu.classList.add("menu");
 contact.classList.add("contact");
 
+aboutMELink.setAttribute("href", "/about-me.html");
+menuLink.setAttribute("href", "/menu.html");
+contactLink.setAttribute("href", "/contact.html");
+
 body.appendChild(navBar);
 navBar.appendChild(headingDiv);
 headingDiv.appendChild(heading);
 
 navBar.appendChild(listDiv);
 listDiv.appendChild(navList);
-navList.appendChild(aboutME);
-navList.appendChild(menu);
-navList.appendChild(contact);
+navList.appendChild(aboutMELink);
+navList.appendChild(menuLink);
+navList.appendChild(contactLink);
+aboutMELink.appendChild(aboutME);
+menuLink.appendChild(menu);
+contactLink.appendChild(contact);
 
 heading.innerText = "Blue Jeans";
 aboutME.innerText = "About Me";

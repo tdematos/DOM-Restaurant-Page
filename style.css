@@ -5,6 +5,8 @@
 }
 
 .navbar {
+  position: fixed;
+  width: 100vw;
   background-color: var(--yellow-background-color);
   display: flex;
   flex-direction: column;
@@ -30,4 +32,13 @@
 
 li {
   padding: 10px;
+  color: black;
+}
+
+li:hover {
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
