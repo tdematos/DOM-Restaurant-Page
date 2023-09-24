@@ -47,9 +47,27 @@ function generateNavbar() {
   menu.innerText = "Menu";
   contact.innerText = "Contact";
   console.log(body);
+
+  //create hero section banner
+  const heroSection = document.createElement("section");
+  const heroTitle = document.createElement("h2");
+  const heroSubTitle = document.createElement("p");
+  const heroButton = document.createElement("button");
+
+  heroSection.classList.add("hero");
+  heroTitle.classList.add("hero-title");
+  heroSubTitle.classList.add("hero-subtitle");
+  heroButton.classList.add("hero-button");
+
+  body.appendChild(heroSection);
+  heroSection.appendChild(heroTitle);
+  heroSection.appendChild(heroSubTitle);
+  heroSection.appendChild(heroButton);
+
+  heroTitle.innerText = "Super Fast Delicious Pizza";
+  heroSubTitle.innerText = "Check out our BRAND-NEW Webpage!";
+  heroButton.innerText = "See Menu";
 }
 generateNavbar();
 
 export default generateNavbar;
-
-//create hero section banner
