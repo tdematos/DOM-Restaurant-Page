@@ -79,10 +79,36 @@ a {
   color: yellow;
   background-color: transparent;
   border: solid yellow 0.2rem;
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.15s;
 }
 
 .hero-button:hover {
   font-family: var(--body-font-family);
   background-color: yellow;
   color: black;
+}
+
+/* about me section styling */
+.about {
+  background-color: var(--yellow-background-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.about-title {
+  font-family: var(--body-font-family);
+  color: black;
+  font-size: 4rem;
+  margin: 0px;
+}
+
+.about-img {
+  height: 200px;
+  width: 200px;
 }
