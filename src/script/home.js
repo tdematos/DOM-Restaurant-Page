@@ -1,3 +1,5 @@
+import aboutMe from "./aboutme";
+
 //create navigation bar
 function generateNavbar() {
   const body = document.querySelector("body");
@@ -12,10 +14,6 @@ function generateNavbar() {
   const menu = document.createElement("li");
   const contact = document.createElement("li");
 
-  const aboutMELink = document.createElement("a");
-  const menuLink = document.createElement("a");
-  const contactLink = document.createElement("a");
-
   navBar.classList.add("navbar");
   headingDiv.classList.add("headingdiv");
   heading.classList.add("title");
@@ -25,22 +23,15 @@ function generateNavbar() {
   menu.classList.add("menu");
   contact.classList.add("contact");
 
-  aboutMELink.setAttribute("href", "/about-me.html");
-  menuLink.setAttribute("href", "/menu.html");
-  contactLink.setAttribute("href", "/contact.html");
-
   body.appendChild(navBar);
   navBar.appendChild(headingDiv);
   headingDiv.appendChild(heading);
 
   navBar.appendChild(listDiv);
   listDiv.appendChild(navList);
-  navList.appendChild(aboutMELink);
-  navList.appendChild(menuLink);
-  navList.appendChild(contactLink);
-  aboutMELink.appendChild(aboutME);
-  menuLink.appendChild(menu);
-  contactLink.appendChild(contact);
+  navList.appendChild(aboutME);
+  navList.appendChild(menu);
+  navList.appendChild(contact);
 
   heading.innerText = "Blue Jeans";
   aboutME.innerText = "About Me";
@@ -67,6 +58,14 @@ function generateNavbar() {
   heroTitle.innerText = "Super Fast Delicious Pizza";
   heroSubTitle.innerText = "Check out our BRAND-NEW Webpage!";
   heroButton.innerText = "See Menu";
+
+  //clicking tabs
+  aboutME.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    aboutMe();
+  });
 }
 generateNavbar();
 

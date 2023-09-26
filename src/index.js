@@ -1,2 +1,3 @@
-import generateNavbar from "./home";
-// import "./style.css";
+import generateNavbar from "./script/home";
+
+import aboutMe from "./script/aboutme";
