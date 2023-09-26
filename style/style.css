@@ -92,6 +92,22 @@ a {
 }
 
 /* about me section styling */
+.about-navbar {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-logo {
+  font-size: 5rem;
+  font-family: var(--title-font-family);
+  margin: 5px;
+  color: var(--yellow-background-color);
+}
+
 .about {
   background-color: var(--yellow-background-color);
   height: 100vh;
@@ -109,6 +125,12 @@ a {
 }
 
 .about-img {
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 300px;
+}
+
+.about-aboutme,
+.about-contact,
+.about-menu {
+  color: var(--yellow-background-color);
 }
