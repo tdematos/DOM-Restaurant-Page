@@ -1,4 +1,5 @@
 import aboutMe from "./aboutme";
+import foodMenu from "./menu";
 
 //create navigation bar
 function generateNavbar() {
@@ -105,6 +106,13 @@ function generateNavbar() {
       body.removeChild(body.firstChild);
     }
     aboutMe();
+  });
+
+  menu.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    foodMenu();
   });
 }
 generateNavbar();

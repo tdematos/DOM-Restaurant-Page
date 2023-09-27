@@ -1,4 +1,6 @@
-function menu() {
+import aboutMe from "./aboutme";
+
+function foodMenu() {
   const body = document.querySelector("body");
   const navBar = document.createElement("nav");
 
@@ -48,30 +50,105 @@ function menu() {
   const aboutTitle = document.createElement("h2");
   const aboutText = document.createElement("p");
   const aboutImageContainer = document.createElement("div");
-  const aboutImage = document.createElement("img");
+  const menuContainer = document.createElement("div");
+  const subMenuContainer = document.createElement("div");
+  const subMenuContainerTwo = document.createElement("div");
+  const innerMenuContainer = document.createElement("div");
+  const innerMenuContainerTwo = document.createElement("div");
+  const innerMenuContainerThree = document.createElement("div");
+  const innerMenuContainerFour = document.createElement("div");
+  const pizzaOne = document.createElement("h3");
+  const pizzaOneDesc = document.createElement("p");
+  const pizzaOnePrice = document.createElement("p");
+  const pizzaTwo = document.createElement("h3");
+  const pizzaTwoDesc = document.createElement("p");
+  const pizzaTwoPrice = document.createElement("p");
 
   aboutSection.classList.add("about");
   aboutTitle.classList.add("about-title");
   aboutText.classList.add("about-subtitle");
   aboutImageContainer.classList.add("about-img-container");
-  aboutImage.classList.add("about-img");
 
   body.appendChild(aboutSection);
   aboutSection.appendChild(aboutTitle);
   aboutSection.appendChild(aboutText);
-  aboutSection.appendChild(aboutImageContainer);
-  aboutImageContainer.appendChild(aboutImage);
+  aboutSection.appendChild(menuContainer);
+  menuContainer.appendChild(subMenuContainer);
+  menuContainer.appendChild(subMenuContainerTwo);
+  subMenuContainer.appendChild(innerMenuContainer);
+  subMenuContainer.appendChild(innerMenuContainerTwo);
+  subMenuContainerTwo.appendChild(innerMenuContainerThree);
+  subMenuContainerTwo.appendChild(innerMenuContainerFour);
+  innerMenuContainer.appendChild(pizzaOne);
+  innerMenuContainer.appendChild(pizzaOneDesc);
+  innerMenuContainerTwo.appendChild(pizzaOnePrice);
+  innerMenuContainerThree.appendChild(pizzaTwo);
+  innerMenuContainerThree.appendChild(pizzaTwoDesc);
+  innerMenuContainerFour.appendChild(pizzaTwoPrice);
 
-  aboutImage.setAttribute("src", "/src/assets/pexels-rene-strgar-13814644.jpg");
-  aboutImage.setAttribute("alt", "picture of neopolitan styled pizza");
+  subMenuContainer.classList.add("inner-container-one");
+  subMenuContainerTwo.classList.add("inner-container-two");
+  innerMenuContainer.classList.add("sub-menu");
+  innerMenuContainerTwo.classList.add("sub-menu");
+  innerMenuContainerThree.classList.add("sub-menu");
+  innerMenuContainerFour.classList.add("sub-menu");
 
   aboutTitle.innerText = "Menu";
-  aboutText.innerText = `Blue Jeans prepares its traditional Italian-style pizza 
-  (with roots in Boston’s North End) by hand-tossing dough 
-  ladling our sweet, chunky sauce and blanketing it with a 
-  three-cheese blend of mozzarella, cheddar and Romano. Blue Jeans’ 
-  deep dish is our homage to the famous 1940s’ Chicago deep 
-  dish pies: pastry-like pie crust, layered, blended mozzarella, 
-  cheddar and Romano cheeses, tomato filets sauce.`;
+  aboutText.innerText = `Check out our assortment of the most tastiest pizzas on the planet!`;
+  pizzaOne.innerText = "Pepperoni Pizza";
+  pizzaOneDesc.innerText = "Pepperoni, mozzeralla, red pepper, EVOO";
+  pizzaOnePrice.innerText = "$18.89";
+  pizzaTwo.innerText = "Cheese Pizza";
+  pizzaTwoDesc.innerText = "Mozzeralla, parmasean, garlic, EVOO";
+  pizzaTwoPrice.innerText = 17.89;
+
+  //create pager footer here
+  const footer = document.createElement("footer");
+  const imageByContainer = document.createElement("div");
+  const githubLinkContainer = document.createElement("div");
+  const menuSelectionContainer = document.createElement("div");
+  const imageLink = document.createElement("a");
+  const githubLink = document.createElement("a");
+  const smallAboutme = document.createElement("p");
+  const smallMenu = document.createElement("p");
+  const smallContact = document.createElement("p");
+
+  body.appendChild(footer);
+  footer.appendChild(imageByContainer);
+  footer.appendChild(githubLinkContainer);
+  footer.appendChild(menuSelectionContainer);
+  imageByContainer.appendChild(imageLink);
+  githubLinkContainer.appendChild(githubLink);
+  menuSelectionContainer.appendChild(smallAboutme);
+  menuSelectionContainer.appendChild(smallMenu);
+  menuSelectionContainer.appendChild(smallContact);
+
+  footer.classList.add("footer");
+  imageLink.classList.add("image-link");
+  githubLink.classList.add("github-link");
+  menuSelectionContainer.classList.add("menuselect-container");
+  smallAboutme.classList.add("small-aboutme");
+  smallContact.classList.add("small-contact");
+  smallMenu.classList.add("small-menu");
+
+  imageLink.innerText = "image by Rene Strgar";
+  githubLink.innerText = "My GitHub";
+  smallAboutme.innerText = "About Me";
+  smallMenu.innerText = "Menu";
+  smallContact.innerText = "contact";
+
+  githubLink.setAttribute("href", "https://github.com/tdematos");
+  imageLink.setAttribute(
+    "href",
+    "https://www.pexels.com/photo/italian-style-pizza-13814644/"
+  );
+
+  aboutME.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    aboutMe();
+  });
 }
-menu();
+
+export default foodMenu;
