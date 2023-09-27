@@ -37,7 +37,6 @@ function generateNavbar() {
   aboutME.innerText = "About Me";
   menu.innerText = "Menu";
   contact.innerText = "Contact";
-  console.log(body);
 
   //create hero section banner
   const heroSection = document.createElement("section");
@@ -58,6 +57,47 @@ function generateNavbar() {
   heroTitle.innerText = "Super Fast Delicious Pizza";
   heroSubTitle.innerText = "Check out our BRAND-NEW Webpage!";
   heroButton.innerText = "See Menu";
+
+  //create pager footer here
+  const footer = document.createElement("footer");
+  const imageByContainer = document.createElement("div");
+  const githubLinkContainer = document.createElement("div");
+  const menuSelectionContainer = document.createElement("div");
+  const imageLink = document.createElement("a");
+  const githubLink = document.createElement("a");
+  const smallAboutme = document.createElement("p");
+  const smallMenu = document.createElement("p");
+  const smallContact = document.createElement("p");
+
+  body.appendChild(footer);
+  footer.appendChild(imageByContainer);
+  footer.appendChild(githubLinkContainer);
+  footer.appendChild(menuSelectionContainer);
+  imageByContainer.appendChild(imageLink);
+  githubLinkContainer.appendChild(githubLink);
+  menuSelectionContainer.appendChild(smallAboutme);
+  menuSelectionContainer.appendChild(smallMenu);
+  menuSelectionContainer.appendChild(smallContact);
+
+  footer.classList.add("footer");
+  imageLink.classList.add("image-link");
+  githubLink.classList.add("github-link");
+  menuSelectionContainer.classList.add("menuselect-container");
+  smallAboutme.classList.add("small-aboutme");
+  smallContact.classList.add("small-contact");
+  smallMenu.classList.add("small-menu");
+
+  imageLink.innerText = "image by Rene Strgar";
+  githubLink.innerText = "My GitHub";
+  smallAboutme.innerText = "About Me";
+  smallMenu.innerText = "Menu";
+  smallContact.innerText = "contact";
+
+  githubLink.setAttribute("href", "https://github.com/tdematos");
+  imageLink.setAttribute(
+    "href",
+    "https://www.pexels.com/photo/italian-style-pizza-13814644/"
+  );
 
   //clicking tabs
   aboutME.addEventListener("click", () => {

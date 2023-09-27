@@ -91,6 +91,43 @@ a {
   color: black;
 }
 
+/* section for styling footer*/
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: var(--yellow-background-color);
+  font-family: var(--body-font-family);
+  width: 100%;
+  height: 40px;
+}
+
+.menuselect-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-aboutme,
+.small-contact,
+.small-menu {
+  padding: 5px;
+}
+
+.github-link,
+.image-link {
+  text-decoration: none;
+  color: var(--yellow-background-color);
+}
+
+.github-link:hover,
+.image-link:hover {
+  color: white;
+}
+
 /* about me section styling */
 .about-navbar {
   width: 100vw;
