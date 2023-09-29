@@ -1,5 +1,7 @@
 import foodMenu from "./menu";
 
+import generateNavbar from "./home";
+
 function aboutMe() {
   const body = document.querySelector("body");
   const navBar = document.createElement("nav");
@@ -122,6 +124,13 @@ cheddar and Romano cheeses, tomato filets sauce.`;
       body.removeChild(body.firstChild);
     }
     foodMenu();
+  });
+
+  heading.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    generateNavbar();
   });
 }
 

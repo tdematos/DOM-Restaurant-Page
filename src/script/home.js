@@ -101,6 +101,13 @@ function generateNavbar() {
   );
 
   //clicking tabs
+  heading.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    generateNavbar();
+  });
+
   aboutME.addEventListener("click", () => {
     while (body.firstChild) {
       body.removeChild(body.firstChild);
@@ -109,6 +116,13 @@ function generateNavbar() {
   });
 
   menu.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    foodMenu();
+  });
+
+  heroButton.addEventListener("click", () => {
     while (body.firstChild) {
       body.removeChild(body.firstChild);
     }

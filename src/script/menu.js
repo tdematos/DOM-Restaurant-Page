@@ -1,5 +1,7 @@
 import aboutMe from "./aboutme";
 
+import generateNavbar from "./home";
+
 function foodMenu() {
   const body = document.querySelector("body");
   const navBar = document.createElement("nav");
@@ -148,6 +150,13 @@ function foodMenu() {
       body.removeChild(body.firstChild);
     }
     aboutMe();
+  });
+
+  heading.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    generateNavbar();
   });
 }
 
