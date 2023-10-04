@@ -186,3 +186,71 @@ a {
   margin: 25px;
   margin-right: 50px;
 }
+
+/*style the contact page here*/
+.contact-section {
+  background-color: var(--yellow-background-color);
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-header {
+  font-family: var(--title-font-family);
+  font-size: 4rem;
+}
+
+.form {
+  padding: 60px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-button {
+  margin: 10px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: var(--body-font-family);
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.15s;
+}
+
+.contact-button:hover {
+  background-color: rgb(65, 65, 65);
+  color: var(--yellow-background-color);
+}
+
+.email-field {
+  margin: 10px;
+  width: 170px;
+}
+
+.text-area {
+  margin: 10px;
+}
+
+.text-label {
+  font-family: var(--body-font-family);
+  position: relative;
+  right: 60px;
+}
+
+.email-label {
+  font-family: var(--body-font-family);
+  position: relative;
+  right: 70px;
+}
