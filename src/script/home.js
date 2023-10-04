@@ -1,5 +1,6 @@
 import aboutMe from "./aboutme";
 import foodMenu from "./menu";
+import contactME from "./contact";
 
 //create navigation bar
 function generateNavbar() {
@@ -120,6 +121,13 @@ function generateNavbar() {
       body.removeChild(body.firstChild);
     }
     foodMenu();
+  });
+
+  contact.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    contactME();
   });
 
   heroButton.addEventListener("click", () => {

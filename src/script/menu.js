@@ -1,5 +1,5 @@
 import aboutMe from "./aboutme";
-
+import contactME from "./contact";
 import generateNavbar from "./home";
 
 function foodMenu() {
@@ -157,6 +157,13 @@ function foodMenu() {
       body.removeChild(body.firstChild);
     }
     generateNavbar();
+  });
+
+  contact.addEventListener("click", () => {
+    while (body.firstChild) {
+      body.removeChild(body.firstChild);
+    }
+    contactME();
   });
 }
 

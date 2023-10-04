@@ -1,6 +1,6 @@
-// import foodMenu from "./menu";
-
-// import generateNavbar from "./home";
+import foodMenu from "./menu";
+import aboutMe from "./aboutme";
+import generateNavbar from "./home";
 
 function contactME() {
   const body = document.querySelector("body");
@@ -155,6 +155,5 @@ function contactME() {
     aboutMe();
   });
 }
-contactME();
 
-// export default aboutMe;
+export default contactME;
